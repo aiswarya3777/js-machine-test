@@ -1,0 +1,34 @@
+//email validation
+  validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            email = document.forms["sign_up_form"]["email"].value;
+            if (!email.match(validRegex)) {
+                document.getElementById('labelemail').innerHTML = "Enter valid email"
+                return_var = false;
+            }
+
+
+
+
+if (f_length < 3) {
+                document.getElementById("fname").innerHTML = "Password must contain minimum 3 letters";
+            }
+            var spcl = "[$&+,:;=?@#|'<>.-^*()%!_]"
+            var spcl_split = spcl.split("");
+            var spcl_length = spcl_split.length;
+            for (i = 0; i < fname_length; i++) {
+                for (j = 0; j < spcl_length; j++) {
+                    if (fname_split[i] == spcl_split[j]) {
+                        document.getElementById("fname").innerHTML = "Special characters are not alloweded"
+                    }
+                }
+            }
+
+            for (k = 0; k < lname_length; k++) {
+                for (j = 0; j < spcl_length; j++) {
+                    if (lname_split[i] == spcl_split[j]) {
+                        document.getElementById("lname").innerHTML = "Special characters are not alloweded"
+                    }
+                }
+            }
+
+          
